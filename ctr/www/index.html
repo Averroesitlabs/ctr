@@ -1,0 +1,56 @@
+        <!DOCTYPE html>
+        <html ng-app = "ctr">
+          <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+            <title></title>
+
+            <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+            <link href="css/style.css" rel="stylesheet">
+
+            <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+            <link href="css/ionic.app.css" rel="stylesheet">
+            -->
+
+            <!-- ionic/angularjs js -->
+            <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+            <!-- cordova script (this will be a 404 during development) -->
+            <script src="cordova.js"></script>
+
+            <!-- your app's js -->
+            <script src="js/app.js"></script>
+            <script src="js/controllers.js"></script>
+
+          </head>
+          <body >
+            <ion-pane>
+              <ion-header-bar class="bar bar-header bar-royal">
+                <h1 class="title">Login</h1>
+              </ion-header-bar>
+              <ion-content scroll = "false" class = "padding">
+                 <div style="height:60px;"></div>
+                <div class="card" ng-controller="loginCtrl" style="margin-left:30px;margin-right:30px;">
+                       <label class="item item-input item-floating-label">
+                        <span class="input-label">Email</span>
+                        <input type = "text" placeholder="Enter Email" ng-model="user.email" >
+                        </label>
+                        <label class="item item-input item-floating-label">
+                        <span class="input-label">Password</span>
+                        <input type="password" placeholder="Enter Password" ng-model="user.password">
+                        </label>
+                    
+                    <div style="margin-left:30px; margin-right:30px; margin-top:30px;">
+                    
+                        <button class="button button-full button-positive" ng-click ="login(user)">
+                            Login
+                        </button>
+                       <button class="button button-full button-positive" style="margin-top:20px;" ng-click = "register()">
+                        Register            
+                       </button>
+                    </div>
+                  </div>
+               </ion-content>
+            </ion-pane>
+          </body>
+        </html>
